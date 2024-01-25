@@ -139,6 +139,24 @@ class QuoteStruct(BaseXmlModel, arbitrary_types_allowed=True):
                 contents.append(TOCSection.from_xml_tree(root=elm))  # type: ignore[arg-type]
             elif elm.tag == "Subitem1":
                 contents.append(Subitem1.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem2":
+                contents.append(Subitem2.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem3":
+                contents.append(Subitem3.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem4":
+                contents.append(Subitem4.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem5":
+                contents.append(Subitem5.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem6":
+                contents.append(Subitem6.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem7":
+                contents.append(Subitem7.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem8":
+                contents.append(Subitem8.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem9":
+                contents.append(Subitem9.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem10":
+                contents.append(Subitem10.from_xml_tree(root=elm))  # type: ignore[arg-type]
             else:
                 raise NotImplementedError(f"{elm.tag} is not implemented yet")
 

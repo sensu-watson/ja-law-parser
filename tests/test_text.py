@@ -20,6 +20,15 @@ from ja_law_parser.model import (
     ArithFormula,
     TOCSection,
     Subitem1,
+    Subitem2,
+    Subitem3,
+    Subitem4,
+    Subitem5,
+    Subitem6,
+    Subitem7,
+    Subitem8,
+    Subitem9,
+    Subitem10,
 )
 
 
@@ -422,4 +431,247 @@ class TestQuoteStruct:
         assert len(quote_struct.contents) == 3
         assert type(quote_struct.contents[0]) == Text
         assert type(quote_struct.contents[1]) == Subitem1
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem2_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem2 Num="1">
+                <Subitem2Title>1</Subitem2Title>
+                <Subitem2Sentence>
+                  <Sentence>Subitem2 Sentence</Sentence>
+                </Subitem2Sentence>
+              </Subitem2>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem2
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem3_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem3 Num="1">
+                <Subitem3Title>1</Subitem3Title>
+                <Subitem3Sentence>
+                  <Sentence>Subitem3 Sentence</Sentence>
+                </Subitem3Sentence>
+              </Subitem3>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem3
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem4_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem4 Num="1">
+                <Subitem4Title>1</Subitem4Title>
+                <Subitem4Sentence>
+                  <Sentence>Subitem4 Sentence</Sentence>
+                </Subitem4Sentence>
+              </Subitem4>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem4
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem5_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem5 Num="1">
+                <Subitem5Title>1</Subitem5Title>
+                <Subitem5Sentence>
+                  <Sentence>Subitem5 Sentence</Sentence>
+                </Subitem5Sentence>
+              </Subitem5>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem5
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem6_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem6 Num="1">
+                <Subitem6Title>1</Subitem6Title>
+                <Subitem6Sentence>
+                  <Sentence>Subitem6 Sentence</Sentence>
+                </Subitem6Sentence>
+              </Subitem6>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem6
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem7_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem7 Num="1">
+                <Subitem7Title>1</Subitem7Title>
+                <Subitem7Sentence>
+                  <Sentence>Subitem7 Sentence</Sentence>
+                </Subitem7Sentence>
+              </Subitem7>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem7
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem8_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem8 Num="1">
+                <Subitem8Title>1</Subitem8Title>
+                <Subitem8Sentence>
+                  <Sentence>Subitem8 Sentence</Sentence>
+                </Subitem8Sentence>
+              </Subitem8>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem8
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem9_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem9 Num="1">
+                <Subitem9Title>1</Subitem9Title>
+                <Subitem9Sentence>
+                  <Sentence>Subitem9 Sentence</Sentence>
+                </Subitem9Sentence>
+              </Subitem9>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem9
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem10_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem10 Num="1">
+                <Subitem10Title>1</Subitem10Title>
+                <Subitem10Sentence>
+                  <Sentence>Subitem10 Sentence</Sentence>
+                </Subitem10Sentence>
+              </Subitem10>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem10
         assert type(quote_struct.contents[2]) == Text
