@@ -17,7 +17,7 @@ class Ruby(BaseXmlModel, tag="Ruby"):
         text: テキスト
     """
 
-    rt: Optional[list[str]] = element(tag="Rt")
+    rt: Optional[list[str]] = element(tag="Rt", default=[])
     text: str
 
 
