@@ -19,6 +19,7 @@ from ja_law_parser.model import (
     AppdxTable,
     ArithFormula,
     TOCSection,
+    Subitem1,
 )
 
 
@@ -394,4 +395,31 @@ class TestQuoteStruct:
         assert len(quote_struct.contents) == 3
         assert type(quote_struct.contents[0]) == Text
         assert type(quote_struct.contents[1]) == TOCSection
+        assert type(quote_struct.contents[2]) == Text
+
+    def test_subitem1_in_quote_struct_contents(self) -> None:
+        xml = """\
+        <SentenceContainer>
+          <Sentence>
+            AAA
+            <QuoteStruct>
+              AAA
+              <Subitem1 Num="1">
+                <Subitem1Title>1</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>Subitem1 Sentence</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              BBB
+            </QuoteStruct>
+            BBB
+          </Sentence>
+        </SentenceContainer>
+        """  # noqa: E501
+        sc: SentenceContainer = SentenceContainer.from_xml(xml)
+        quote_struct: QuoteStruct = sc.sentences[0].contents[1]
+        assert type(quote_struct) == QuoteStruct
+        assert len(quote_struct.contents) == 3
+        assert type(quote_struct.contents[0]) == Text
+        assert type(quote_struct.contents[1]) == Subitem1
         assert type(quote_struct.contents[2]) == Text

@@ -137,6 +137,8 @@ class QuoteStruct(BaseXmlModel, arbitrary_types_allowed=True):
                 contents.append(ArithFormula.from_xml_tree(root=elm))  # type: ignore[arg-type]
             elif elm.tag == "TOCSection":
                 contents.append(TOCSection.from_xml_tree(root=elm))  # type: ignore[arg-type]
+            elif elm.tag == "Subitem1":
+                contents.append(Subitem1.from_xml_tree(root=elm))  # type: ignore[arg-type]
             else:
                 raise NotImplementedError(f"{elm.tag} is not implemented yet")
 
